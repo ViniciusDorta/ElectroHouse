@@ -1,5 +1,5 @@
 const sequelize = require("sequelize");
-const connection = new sequelize("cadastro", "root", "NDorta300499", {
+const connection = new sequelize("cadastro", "root", "SenhaBddMySQL", {
     host: "localhost",
     dialect: "mysql"
 });
