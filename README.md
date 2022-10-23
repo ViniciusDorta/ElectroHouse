@@ -5,9 +5,7 @@ O usuario faz seu cadastro e ja é redirecionado diretamente a aba de compras po
 
 # Video
 
- <p align="center">
-  <img src="src/assets/ElectroHouseVideo.mp4>
- </p>
+ video
 
 # ✔️ Tecnologias utilizadas
 
