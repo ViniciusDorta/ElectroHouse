@@ -4,7 +4,10 @@ Projeto de cadastros e vendas, onde o dono/funcionario do site pode cadastrar se
 O usuario faz seu cadastro e ja é redirecionado diretamente a aba de compras podendo ja ter acesso a compra de varios produtos.
 
 # Video
- video
+
+ <p align="center">
+  <img src="src/assets/ElectroHouseVideo.mp4>
+ </p>
 
 # ✔️ Tecnologias utilizadas
 
