@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-color: #000;
+    --main-color: #fff;
+    --blue-color: #0d6efd;
+    --gray-color: #e1e1e1;
+    --bright-blue: #00bac6;
+}
+
+body {
+    background-color: var(--gray-color);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif, verdana;
+}
+
+ul {
+    padding: 0px !important;
+}
+
+/* Header */
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu-principal {
+    width: 100%;
+    background-color: var(--header-color);
+    display: flex;
+}
+
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.redes-sociais ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.redes-sociais ul li {
+    margin-left: 20px;
+    list-style: none;
+}
+
+.redes-sociais {
+    position: relative;
+}
+
+.icon-logout {
+    margin-left: 40px;
+}
+
+.icon-logout i {
+    font-size: 25px;
+}
+
+.icon-logout a {
+    color: var(--gray-color);
+}
+
+.icon-logout a:hover {
+    color: var(--bright-blue);
+}
+
+
+/* Cadastro */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px 0;
+    min-height: calc(100vh - 64px);
+}
+
+.container-cadastro {
+    box-shadow: 0 0 10px 0 var(--blue-color);
+    border-radius: 15px;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    padding: 10px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wrap-cadastro {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.wrap-input span {
+    font-size: 16px;
+}
+
+.wrap-input {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.input-form {
+    width: 60%;
+    font-size: 12px;
+    border-color: var(--blue-color);
+}
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.btn button {
+    width: 100% !important;
+}
+
+hr {
+    background-image: linear-gradient(5deg, var(--blue-color), var(--blue-color));
+    -webkit-text-fill-color: transparent;
+    padding: 1px;
+    border: none;
+}
+
+/* Login */
+
+.container-login {
+    box-shadow: 0 0 10px 0 var(--blue-color);
+    border-radius: 15px;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 50%, 900px);
+}
+
+.wrap {
+    margin: 30px 0;
+}
+
+.wrap-login {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.links {
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Dashboard / HomePage */
+
+.menu-urls {}
+
+.header-2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: var(--main-color);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+.menu ul li {
+    border-bottom: 3px solid transparent;
+}
+
+.menu ul li:hover {
+    border-bottom: 3px solid var(--bright-blue);
+}
+
+.menu ul li a:hover {
+    color: var(--bright-blue);
+}
+
+.menu ul li a {
+    padding: 15px;
+    color: #797979;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.busca {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.busca input {
+    background-image: url('../images/pesquisa.png');
+    background-repeat: no-repeat;
+    background-position: 95%;
+    height: 30px;
+    padding: 10px;
+    width: 400px;
+    border: 2px solid var(--gray-color);
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+}
+
+.slider-principal {
+    height: 500px;
+}
+
+.slider-principal img {
+    height: 500px;
+}
+
+button.slick-prev {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    background-color: transparent;
+    background-image: url('../images/anterior.png');
+    position: absolute;
+    z-index: 9;
+    top: 35%;
+    left: 15%;
+}
+
+button.slick-next {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    background-color: transparent;
+    background-image: url('../images/posterior.png');
+    position: absolute;
+    z-index: 9;
+    top: 35%;
+    right: 15%;
+}
+
+.slider-list {
+    width: 100% !important;
+}
+
+.slick-initialized {
+    overflow: hidden;
+}
+
+.slick-dots li button {
+    font-size: 0px;
+    border: 4px solid var(--main-color);
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick-dots {
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    top: 450px;
+}
+
+li.slick-active button {
+    background: var(--bright-blue);
+}
+
+.slick-dots li {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+/* Login Employees */
+
+.container-btn-employees {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.btn-employees {
+    display: flex;
+    width: 100%;
+}
+
+.btn-employees button {
+    width: 80%;
+    margin-left: 42px;
+}
+
+.btn-employees a {
+    width: 80%;
+}
+
+/* Cadastro Produtos */
+
+.cadastro-products {
+    box-shadow: 0 0 10px 0 var(--blue-color);
+    border-radius: 15px;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 10px;
+}
+
+.form-products {
+    width: 70%;
+}
+
+.cards-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cards-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 286px;
+    height: 286px;
+    position: relative;
+}
+
+.card-text {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.cards-txt {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.delete-cards button {
+    background-color: crimson;
+    border: transparent;
+}
+
+.delete-cards button:hover {
+    background-color: crimson;
+}
+
+.cards-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.card {
+    box-shadow: 0 0 8px 0 var(--blue-color);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-wrap {
+    display: flex;
+    width: 20%;
+    font-size: 12px;
+    border-color: var(--blue-color);
+}
+
+.wrap-input-cadastro {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Buy Screen */
+
+.back-white {
+    background-color: var(--main-color);
+}
+
+.class-buy {
+    display: flex;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.image-buy{
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+}
+.image-buy img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text-buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-buy {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.valor-buy {
+    font-size: 20px;
+}
+
+.descri-buy {
+    font-size: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+/* Modal */
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Minhas compras */
+.minhas-compras-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.minhas-compras-group{
+    width: clamp(300px, 50%, 900px);
+}
+.minhas-compras-item{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 8px 0;
+}
+
+.minhas-compras-item-imagem{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.minhas-compras-item-imagem img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.minhas-compras-item-container{
+    padding: 5px 15px;
+    flex:1;
+}
+.minhas-compras-item-action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* Detalhes da compra */
+.detalhes-compra-container{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.detalhes-compra-container-card{
+    padding: 10px;
+    border-radius: 8px;
+    width: clamp(300px, 50%, 900px);
+    background-color: white;
+}
+
+.detalhes-compra-container-card-detail{
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+}
+.detalhes-compra-container-card-detail-info{
+    display: flex;
+    gap: 16px;
+    padding: 10px 0;
+}
+.detalhes-imagem{
+    width: 200px;
+    height: 200px;
+}
+.detalhes-imagem img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.btn-esgotado{
+    background-color: lightgray;
+    cursor: default;
+    color: gray;
+}
+
+.btn-esgotado:hover{
+    background-color: lightgray;
+    cursor: default;
+    color: gray;
+}
+.compra-realizada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    font-size: 25px;
+    color: green;
+    flex-direction: column;
+}
+.compra-realizada-icon{
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.compra-realizada-icon i {
+    font-size: 90px;
+}

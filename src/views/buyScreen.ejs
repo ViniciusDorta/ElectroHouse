@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <script src="https://kit.fontawesome.com/ccff9e51ab.js" crossorigin="anonymous"></script>
+
+    <title>ElectroHouse</title>
+</head>
+
+<body class="back-white">
+    <header class="menu-principal">
+        <main>
+            <div class="header-1">
+                <a href="/dashboard" class="logo">
+                    <img src="../images/logo.png">
+                </a>
+                <div class="redes-sociais">
+                    <ul>
+                        <li><a href="#"><img src="../images/rede.png"></a></li>
+                        <li><a href="#"><img src="../images/facebook.png"></a></li>
+                        <li><a href="#"><img src="../images/twitter.png"></a></li>
+                        <li><a href="#"><img src="../images/linkedin.png"></a></li>
+                        <div class="icon-logout">
+                            <a href="/logout">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main class="slider menu-urls">
+        <div class="header-2">
+            <div class="menu">
+                <div class="position">
+                    <ul>
+                        <li><a href="#">Promoçôes</a></li>
+                        <li><a href="#">Sobre-nos</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Parcerias</a></li>
+                        <li><a href="#">Contate-nos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div>
+        <div class="class-buy">
+            <div class="image-buy">
+                <img src="<%= product.imagem %>" alt="...">
+            </div>
+            <div class="text-buy">
+                <div class="name-buy">
+                    <p>
+                        <%= product.nome %>
+                    </p>
+                </div>
+                <div class="valor-buy">
+                    <span>Valor de R$:</span>
+                    <b>
+                        <%= product.valor %>
+                    </b>
+                </div>
+                <div class="descri-buy">
+                    <p>
+                        <%= product.descricao %>
+                    </p>
+                </div>
+                <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Detalhes da Compra</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/CreateOrder" method="post">
+                                    <div class="card" style="width: 18rem;">
+                                        <div class="cards-image">
+                                            <img src="<%= product.imagem %>" class="card-img-top" alt="...">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <%= product.nome %>
+                                            </p>
+                                            <div class="cards-txt">
+                                                <span>R$:</span>
+                                                <b>
+                                                    <%= product.valor %>
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="hidden" name="txtId" value="<%= product.id %>">
+                                <button class="btn btn-primary" type="submit">Confirmar Compra</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% if(product.quantidade > 0) { %>
+                    <a class="btn btn-primary btn-buy" data-bs-toggle="modal" href="#exampleModalToggle"role="button">Comprar</a>
+                <% } else { %>
+                    <a class="btn btn-esgotado"> <i class="fa-solid fa-lock"></i> Esgotado</a>
+                <% } %>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-migrade.js"></script>
+    <script type="text/javascript" src="../scripts/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

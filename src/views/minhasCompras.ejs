@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <script src="https://kit.fontawesome.com/ccff9e51ab.js" crossorigin="anonymous"></script>
+    <title>Minhas compras</title>
+</head>
+<body>
+    <header class="menu-principal">
+        <main>
+            <div class="header-1">
+                <a href="/dashboard" class="logo">
+                    <img src="../images/logo.png">
+                </a>
+                <div class="redes-sociais">
+                    <ul>
+                        <li><a href="#"><img src="../images/rede.png"></a></li>
+                        <li><a href="#"><img src="../images/facebook.png"></a></li>
+                        <li><a href="#"><img src="../images/twitter.png"></a></li>
+                        <li><a href="#"><img src="../images/linkedin.png"></a></li>
+                        <div class="icon-logout">
+                            <a href="/logout">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main class="slider menu-urls">
+        <div class="header-2">
+            <div class="menu">
+                <div class="position">
+                    <ul>
+                        <li><a href="/dashboard">Inicio</a></li>
+                        <li><a href="/minhasCompras">Minhas Compras</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="minhas-compras-container">
+        <div class="minhas-compras-group">
+            
+            <div><i class="fa-solid fa-bag-shopping"></i> Minhas compras</div>
+            <% orders.forEach(order => { %>
+                <div class="minhas-compras-item">
+                    <div class="minhas-compras-item-imagem">
+                        <img src="<%= order.product.imagem %>" alt="">
+                    </div>
+                    <div class="minhas-compras-item-container">
+                        <div><%= order.product.nome %></div>
+                        <div>R$ <%= order.valor %></div>
+                    </div>
+                    <div class="minhas-compras-item-action">
+                        <a href="/detalhe/<%= order.id %>" class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Detalhes</a>
+                    </div>
+                </div>
+            <% }) %>
+            
+        </div>
+    </div> 
+</body>
+</html>
