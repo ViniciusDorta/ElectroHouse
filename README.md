@@ -1,7 +1,6 @@
 # ElectroHouse
 
-Projeto de cadastros e vendas, onde o dono/funcionario do site pode cadastrar seus produtos e consultar cada venda detalhadamente.
-O usuario faz seu cadastro e ja é redirecionado diretamente a aba de compras podendo ja ter acesso a compra de varios produtos.
+Projeto de cadastros e vendas - Onde é acessível ao administrador ou funcionário registrar produtos e consultar cada venda detalhadamente. O usuário faz seu cadastro e automaticamente é redirecionado a aba de compras, tendo a possibilidade de acessar a aquisição de vários produtos.
 
 # Video
 
